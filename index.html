@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- DEMO ONLY — keep noindex until this goes live on Kyla's own domain -->
+<meta name="robots" content="noindex, nofollow" />
+<title>Beauty By Kyla — Brows, Lashes, Nails & Massage · New Costessey, Norwich</title>
+<meta name="description" content="A small five-star beauty studio in New Costessey, Norwich. Brows, lashes, waxing, tinting, gel nails and massage by Kyla. Book online." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --porcelain:#FBF4F1;
+    --porcelain-2:#F4E7E2;
+    --ink:#1B1316;
+    --ink-soft:#5B4A50;
+    --raspberry:#C9184A;
+    --raspberry-deep:#9E1240;
+    --pink:#FFC2D4;
+    --lilac:#E4D3F0;
+    --peach:#FBD9BE;
+    --line:rgba(27,19,22,.12);
+    --white:#FFFFFF;
+
+    --display:"Bodoni Moda",Georgia,serif;
+    --sans:"Manrope",system-ui,-apple-system,sans-serif;
+
+    --maxw:1180px;
+    --r:18px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    font-family:var(--sans);
+    background:var(--porcelain);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  .eyebrow{
+    font-size:.72rem;font-weight:700;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--raspberry);
+  }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--sans);font-weight:700;font-size:.92rem;
+    letter-spacing:.01em;padding:.85em 1.5em;border-radius:999px;
+    cursor:pointer;border:1.5px solid transparent;transition:.25s ease;
+  }
+  .btn--primary{background:var(--ink);color:var(--porcelain)}
+  .btn--primary:hover{background:var(--raspberry)}
+  .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn--ghost:hover{border-color:var(--ink);background:rgba(27,19,22,.04)}
+  .btn--light{background:var(--porcelain);color:var(--ink)}
+  .btn--light:hover{background:var(--white)}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{
+    outline:2.5px solid var(--raspberry);outline-offset:3px;border-radius:4px;
+  }
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,244,241,.78);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-family:var(--display);font-size:1.32rem;font-weight:600;letter-spacing:.01em}
+  .brand em{font-style:italic;font-weight:500}
+  .nav__links{display:flex;align-items:center;gap:34px}
+  .nav__links a{font-size:.9rem;font-weight:600;color:var(--ink-soft);transition:color .2s}
+  .nav__links a:hover{color:var(--ink)}
+  .nav__cta{display:flex;align-items:center;gap:14px}
+  .nav__toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .nav__toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:74px 0 64px;overflow:hidden}
+  .mesh{position:absolute;inset:-20% -10% auto -10%;height:140%;z-index:0;filter:blur(8px);opacity:.9}
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);mix-blend-mode:multiply;opacity:.62}
+  .blob.b1{width:520px;height:520px;background:var(--raspberry);top:-160px;right:-60px}
+  .blob.b2{width:460px;height:460px;background:var(--pink);top:40px;left:-120px}
+  .blob.b3{width:420px;height:420px;background:var(--lilac);top:140px;right:160px}
+  .blob.b4{width:380px;height:380px;background:var(--peach);top:280px;left:200px}
+  @media (prefers-reduced-motion:no-preference){
+    .blob{animation:float 16s ease-in-out infinite alternate}
+    .blob.b2{animation-duration:19s}
+    .blob.b3{animation-duration:22s}
+    .blob.b4{animation-duration:18s}
+  }
+  @keyframes float{from{transform:translate(0,0) scale(1)}to{transform:translate(26px,-30px) scale(1.08)}}
+
+  .hero__inner{position:relative;z-index:2}
+  .hero__chip{
+    display:inline-flex;align-items:center;gap:.55em;
+    background:rgba(255,255,255,.7);border:1px solid var(--line);
+    padding:.45em 1em;border-radius:999px;font-size:.8rem;font-weight:700;
+    margin-bottom:26px;
+  }
+  .hero__chip .stars{color:var(--raspberry);letter-spacing:.06em}
+  .hero h1{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(3.4rem,11.5vw,8.4rem);
+    line-height:.92;letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:italic;color:var(--raspberry)}
+  .hero__sub{
+    max-width:480px;margin:28px 0 34px;font-size:1.12rem;
+    color:var(--ink-soft);font-weight:500;
+  }
+  .hero__actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+  /* ---------- marquee ---------- */
+  .ticker{
+    border-block:1px solid var(--line);
+    background:var(--ink);color:var(--porcelain);
+    padding:18px 0;overflow:hidden;white-space:nowrap;
+  }
+  .ticker__track{display:inline-flex;gap:0;will-change:transform}
+  @media (prefers-reduced-motion:no-preference){
+    .ticker__track{animation:marquee 28s linear infinite}
+  }
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .ticker__track span{
+    font-family:var(--display);font-style:italic;font-weight:400;
+    font-size:1.5rem;padding:0 32px;display:inline-flex;align-items:center;
+  }
+  .ticker__track span::after{content:"✦";color:var(--raspberry);font-style:normal;margin-left:64px;font-size:.8em}
+
+  /* ---------- section base ---------- */
+  .section{padding:96px 0}
+  .section__head{max-width:640px;margin-bottom:54px}
+  .section__head h2{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.04;margin:14px 0 0;
+    letter-spacing:-.01em;
+  }
+  .section__head h2 em{font-style:italic;color:var(--raspberry)}
+
+  /* ---------- menu ---------- */
+  .menu{background:var(--porcelain-2)}
+  .menu__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 64px}
+  .cat__title{
+    font-family:var(--display);font-size:1.5rem;font-weight:600;
+    padding-bottom:14px;margin-bottom:8px;border-bottom:1.5px solid var(--ink);
+    display:flex;justify-content:space-between;align-items:baseline;
+  }
+  .cat__title small{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--raspberry)}
+  .row{
+    display:flex;align-items:baseline;gap:14px;padding:13px 0;
+    border-bottom:1px dotted var(--line);
+  }
+  .row__name{font-weight:600;font-size:1rem;white-space:nowrap}
+  .row__dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+  .row__price{font-weight:700;font-size:1rem;color:var(--raspberry);font-variant-numeric:tabular-nums}
+  .menu__note{margin-top:46px;font-size:.92rem;color:var(--ink-soft)}
+  .menu__note a{color:var(--raspberry);font-weight:700}
+
+  /* ---------- studio ---------- */
+  .studio__inner{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .studio__panel{
+    position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 20% 15%, var(--pink), transparent 55%),
+      radial-gradient(120% 120% at 85% 25%, var(--lilac), transparent 55%),
+      radial-gradient(140% 140% at 60% 100%, var(--raspberry), transparent 60%),
+      var(--porcelain-2);
+    display:flex;align-items:flex-end;padding:28px;
+  }
+  .studio__panel .tag{
+    background:rgba(251,244,241,.85);backdrop-filter:blur(6px);
+    border-radius:12px;padding:10px 16px;font-size:.8rem;font-weight:700;
+    color:var(--ink-soft);
+  }
+  .studio__panel .tag b{color:var(--ink);display:block;font-size:.92rem}
+  .studio__copy p{margin-top:18px;color:var(--ink-soft);font-size:1.06rem}
+  .studio__copy p:first-of-type{font-size:1.18rem;color:var(--ink)}
+  .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .pill{font-size:.82rem;font-weight:700;padding:.5em 1em;border:1.5px solid var(--line);border-radius:999px}
+
+  /* ---------- feed ---------- */
+  .feed__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tile{
+    position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;
+    display:flex;align-items:flex-end;padding:16px;color:var(--ink);
+    font-weight:700;font-size:.86rem;
+    transition:transform .3s ease;
+  }
+  .tile:hover{transform:translateY(-4px)}
+  .tile span{position:relative;z-index:2;background:rgba(251,244,241,.82);padding:.35em .7em;border-radius:8px}
+  .tile.t1{background:radial-gradient(120% 120% at 30% 20%, var(--pink), var(--raspberry))}
+  .tile.t2{background:radial-gradient(120% 120% at 70% 30%, var(--lilac), var(--peach))}
+  .tile.t3{background:radial-gradient(120% 120% at 20% 80%, var(--peach), var(--raspberry))}
+  .tile.t4{background:radial-gradient(120% 120% at 80% 20%, var(--raspberry), var(--lilac))}
+  .tile.t5{background:radial-gradient(120% 120% at 40% 60%, var(--pink), var(--lilac))}
+  .tile.t6{background:radial-gradient(120% 120% at 60% 80%, var(--peach), var(--pink))}
+  .feed__cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--ink);color:var(--porcelain)}
+  .reviews .section__head h2{color:var(--porcelain)}
+  .reviews .eyebrow{color:var(--pink)}
+  .rev__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .rev{border:1px solid rgba(251,244,241,.16);border-radius:var(--r);padding:30px}
+  .rev .stars{color:var(--pink);font-size:1.05rem;letter-spacing:.1em;margin-bottom:16px}
+  .rev p{font-family:var(--display);font-size:1.2rem;line-height:1.45;font-style:italic;font-weight:400}
+  .rev cite{display:block;margin-top:18px;font-family:var(--sans);font-style:normal;font-size:.85rem;font-weight:700;color:var(--pink);letter-spacing:.04em}
+  .rev__score{
+    text-align:center;margin-top:54px;font-family:var(--display);
+  }
+  .rev__score b{font-size:3.2rem;font-weight:600;display:block;line-height:1}
+  .rev__score small{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,244,241,.7)}
+
+  /* ---------- find ---------- */
+  .find__inner{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .info dt{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--raspberry);margin-top:26px}
+  .info dt:first-child{margin-top:0}
+  .info dd{font-size:1.12rem;font-weight:600;margin-top:6px}
+  .info dd a{border-bottom:1.5px solid var(--line)}
+  .info dd a:hover{border-color:var(--raspberry)}
+  .hours{margin-top:6px}
+  .hours div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dotted var(--line);font-size:.98rem}
+  .hours span:first-child{font-weight:700}
+  .hours .closed{color:var(--ink-soft)}
+  .find__card{
+    background:var(--ink);color:var(--porcelain);border-radius:var(--r);
+    padding:40px;display:flex;flex-direction:column;justify-content:center;
+  }
+  .find__card h3{font-family:var(--display);font-weight:500;font-size:2rem;line-height:1.08}
+  .find__card p{margin:16px 0 26px;color:rgba(251,244,241,.78)}
+
+  /* ---------- footer ---------- */
+  .footer{padding:64px 0 40px;border-top:1px solid var(--line)}
+  .footer__top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:30px}
+  .footer__brand{font-family:var(--display);font-size:2.4rem;font-weight:600}
+  .footer__brand em{font-style:italic;font-weight:500}
+  .footer__links{display:flex;gap:26px;font-size:.9rem;font-weight:600;flex-wrap:wrap}
+  .footer__links a{color:var(--ink-soft)}
+  .footer__links a:hover{color:var(--ink)}
+  .footer__base{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    margin-top:46px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:.82rem;color:var(--ink-soft);
+  }
+  .footer__base a{color:var(--raspberry);font-weight:700}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:860px){
+    .nav__links{
+      position:fixed;inset:70px 0 auto 0;flex-direction:column;gap:0;
+      background:var(--porcelain);border-bottom:1px solid var(--line);
+      padding:8px 0;transform:translateY(-130%);transition:transform .35s ease;
+    }
+    .nav__links.open{transform:translateY(0)}
+    .nav__links a{padding:14px 24px;width:100%}
+    .nav__toggle{display:block}
+    .nav .nav__cta .btn--ghost{display:none}
+    .studio__inner,.find__inner{grid-template-columns:1fr;gap:36px}
+    .menu__grid,.feed__grid,.rev__grid{grid-template-columns:1fr}
+    .feed__grid{grid-template-columns:1fr 1fr}
+    .section{padding:68px 0}
+    .hero{padding:48px 0 40px}
+  }
+  @media (max-width:480px){
+    .feed__grid{grid-template-columns:1fr 1fr}
+    .footer__top{align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">Beauty <em>by</em> Kyla</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#menu">Services</a>
+      <a href="#studio">The Studio</a>
+      <a href="#feed">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#find">Find Us</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--ghost" href="tel:07359187597">Call</a>
+      <!-- TODO: point to Kyla's live Fresha (or Square) booking link -->
+      <a class="btn btn--primary" href="#book">Book now</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="mesh" aria-hidden="true">
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <div class="blob b3"></div><div class="blob b4"></div>
+  </div>
+  <div class="wrap hero__inner">
+    <div class="hero__chip"><span class="stars">★★★★★</span> 5.0 · New Costessey, Norwich</div>
+    <h1>Beauty,<br>by <em>Kyla.</em></h1>
+    <p class="hero__sub">A small, five-star studio for brows, lashes, waxing, gel nails and massage — proper attention to detail, no rush, just you.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#book">Book your appointment</a>
+      <a class="btn btn--ghost" href="#menu">See the menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Brows</span><span>Lashes</span><span>Waxing</span><span>Tinting</span><span>Gel Nails</span><span>Massage</span>
+    <span>Brows</span><span>Lashes</span><span>Waxing</span><span>Tinting</span><span>Gel Nails</span><span>Massage</span>
+  </div>
+</div>
+
+<!-- MENU -->
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">The Menu</span>
+      <h2>Treatments, priced <em>simply.</em></h2>
+    </div>
+
+    <!-- PLACEHOLDER PRICES — swap for Kyla's live Fresha rates before launch -->
+    <div class="menu__grid">
+      <div class="cat">
+        <div class="cat__title">Brows &amp; Lashes <small>Define</small></div>
+        <div class="row"><span class="row__name">Brow Shape</span><span class="row__dots"></span><span class="row__price">£10</span></div>
+        <div class="row"><span class="row__name">Brow Tint</span><span class="row__dots"></span><span class="row__price">£8</span></div>
+        <div class="row"><span class="row__name">Shape &amp; Tint</span><span class="row__dots"></span><span class="row__price">£16</span></div>
+        <div class="row"><span class="row__name">Brow Lamination</span><span class="row__dots"></span><span class="row__price">£35</span></div>
+        <div class="row"><span class="row__name">Lash Tint</span><span class="row__dots"></span><span class="row__price">£12</span></div>
+        <div class="row"><span class="row__name">Lash Lift</span><span class="row__dots"></span><span class="row__price">£38</span></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__title">Waxing <small>Smooth</small></div>
+        <div class="row"><span class="row__name">Lip or Chin</span><span class="row__dots"></span><span class="row__price">£7</span></div>
+        <div class="row"><span class="row__name">Lip &amp; Chin</span><span class="row__dots"></span><span class="row__price">£12</span></div>
+        <div class="row"><span class="row__name">Underarm</span><span class="row__dots"></span><span class="row__price">£10</span></div>
+        <div class="row"><span class="row__name">Half Leg</span><span class="row__dots"></span><span class="row__price">£16</span></div>
+        <div class="row"><span class="row__name">Full Leg</span><span class="row__dots"></span><span class="row__price">£26</span></div>
+        <div class="row"><span class="row__name">Bikini</span><span class="row__dots"></span><span class="row__price">£14</span></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__title">Nails <small>Gel</small></div>
+        <div class="row"><span class="row__name">Gel Manicure</span><span class="row__dots"></span><span class="row__price">£25</span></div>
+        <div class="row"><span class="row__name">Gel on Toes</span><span class="row__dots"></span><span class="row__price">£25</span></div>
+        <div class="row"><span class="row__name">Builder Gel Overlay</span><span class="row__dots"></span><span class="row__price">£32</span></div>
+        <div class="row"><span class="row__name">Soak-off &amp; Removal</span><span class="row__dots"></span><span class="row__price">£8</span></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__title">Massage <small>Unwind</small></div>
+        <div class="row"><span class="row__name">Back, Neck &amp; Shoulder · 30 min</span><span class="row__dots"></span><span class="row__price">£28</span></div>
+        <div class="row"><span class="row__name">Full Body · 60 min</span><span class="row__dots"></span><span class="row__price">£45</span></div>
+        <div class="row"><span class="row__name">Aromatherapy Add-on</span><span class="row__dots"></span><span class="row__price">£6</span></div>
+      </div>
+    </div>
+
+    <p class="menu__note">Full list and live availability on <a href="#book">Fresha</a>. Can't see what you're after? <a href="tel:07359187597">Message Kyla</a> and she'll sort it.</p>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="section" id="studio">
+  <div class="wrap studio__inner">
+    <div class="studio__panel">
+      <!-- swap this gradient panel for a portrait of Kyla / the studio -->
+      <div class="tag"><b>The studio</b>214 Dereham Rd · New Costessey</div>
+    </div>
+    <div class="studio__copy">
+      <span class="eyebrow">The Studio</span>
+      <div class="section__head" style="margin-bottom:0">
+        <h2>One chair, <em>full focus.</em></h2>
+      </div>
+      <p>Beauty By Kyla is a small, independent studio in New Costessey — which means when you book, the time is yours. No conveyor belt, no upselling, just careful work and a calm hour out of your day.</p>
+      <p>Newly opened and already five stars, Kyla trained across brows, lashes, waxing, gel nails and massage, so you can keep your whole routine in one place with someone who knows your face.</p>
+      <div class="pillrow">
+        <span class="pill">★ 5.0 rated</span>
+        <span class="pill">Independent &amp; local</span>
+        <span class="pill">Easy parking</span>
+        <span class="pill">Evening slots</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEED -->
+<section class="section menu" id="feed">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">The Gallery</span>
+      <h2>Recent <em>work.</em></h2>
+    </div>
+    <!-- replace each tile with a real photo from Kyla's Instagram / Facebook -->
+    <div class="feed__grid">
+      <div class="tile t1"><span>Brow lamination</span></div>
+      <div class="tile t2"><span>Gel set · nude</span></div>
+      <div class="tile t3"><span>Lash lift</span></div>
+      <div class="tile t4"><span>Shape &amp; tint</span></div>
+      <div class="tile t5"><span>Builder gel</span></div>
+      <div class="tile t6"><span>French tips</span></div>
+    </div>
+    <div class="feed__cta">
+      <!-- TODO: Kyla's real Instagram + Facebook URLs -->
+      <a class="btn btn--primary" href="#">Follow on Instagram</a>
+      <a class="btn btn--ghost" href="#">See more on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Kind Words</span>
+      <h2>Loved by locals.</h2>
+    </div>
+    <!-- SAMPLE reviews — replace with real Fresha / Google quotes before launch -->
+    <div class="rev__grid">
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>Best brows I've had in Norwich. Kyla took her time and they're exactly the shape I wanted.</p>
+        <cite>— Sample review</cite>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>Lovely calm little studio and my gels lasted three weeks. Already booked my next set.</p>
+        <cite>— Sample review</cite>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>So glad I found somewhere local. Friendly, spotless, and you never feel rushed.</p>
+        <cite>— Sample review</cite>
+      </div>
+    </div>
+    <div class="rev__score">
+      <b>5.0 ★</b>
+      <small>Across every review so far</small>
+    </div>
+  </div>
+</section>
+
+<!-- FIND -->
+<section class="section" id="find">
+  <div class="wrap find__inner">
+    <div>
+      <div class="section__head" style="margin-bottom:32px">
+        <span class="eyebrow">Find Us</span>
+        <h2>New Costessey, <em>Norwich.</em></h2>
+      </div>
+      <dl class="info">
+        <dt>Studio</dt>
+        <dd><a href="https://maps.google.com/?q=214+Dereham+Rd+New+Costessey+Norwich+NR5+0SW" target="_blank" rel="noopener">214 Dereham Rd, New Costessey, Norwich NR5 0SW</a></dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:07359187597">07359 187597</a></dd>
+        <dt>Opening hours</dt>
+      </dl>
+      <!-- placeholder hours — confirm Kyla's real opening times -->
+      <div class="hours">
+        <div><span>Tue – Fri</span><span>9:00 – 18:00</span></div>
+        <div><span>Saturday</span><span>9:00 – 16:00</span></div>
+        <div><span>Sun – Mon</span><span class="closed">Closed</span></div>
+      </div>
+    </div>
+    <div class="find__card">
+      <h3>Ready when you are.</h3>
+      <p>Pick a time that suits you and book in a few taps — or call if you'd rather talk it through.</p>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="#book">Book now</a>
+        <a class="btn btn--ghost" style="color:var(--porcelain);border-color:rgba(251,244,241,.4)" href="tel:07359187597">Call Kyla</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">Beauty <em>by</em> Kyla</div>
+      <nav class="footer__links">
+        <a href="#menu">Services</a>
+        <a href="#studio">The Studio</a>
+        <a href="#feed">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#find">Find Us</a>
+        <a href="#book">Book</a>
+      </nav>
+    </div>
+    <div class="footer__base">
+      <span>© <span id="yr"></span> Beauty By Kyla · 214 Dereham Rd, New Costessey, Norwich NR5 0SW</span>
+      <span>Website by <a href="https://wearesparklab.com" target="_blank" rel="noopener">SparkLab Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+  });
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
